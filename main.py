@@ -38,7 +38,9 @@ def write_text_to_file(file_path, text):
 
 def main():
     # PDFファイルが入っているフォルダーを指定
-    directory_path = "C:\\Users\\hkato\\Documents\\vscode\\Denchoho\\"
+    # directory_path = "C:\\Users\\hkato\\Documents\\vscode\\Denchoho\\"
+    # main.pyのフォルダーを取得
+    directory_path = os.path.dirname(os.path.abspath(__file__))
     # フォルダー内のPDFファイルの配列pdf_pathsを取得
     pdf_paths = get_pdf_paths(directory_path)
     # 変更前のPDFファイル名
