@@ -1,0 +1,8 @@
+# .gitignore file
+.env
+AWS.pdf
+AWS.txt
+アマゾン.pdf
+アマゾン.txt
+名刺.pdf
+名刺.txt
