@@ -1,3 +1,5 @@
+# develop branch
+
 import os
 import openai #OpenAIのAPI
 import codecs
