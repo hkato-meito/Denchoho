@@ -91,6 +91,13 @@ def main():
     # 変更前後のファイル名を表示
     for original, changed in zip(original_pdf_filenames, changed_pdf_filenames):
         print(f"{original}  ->  {changed}")
+        
+    for i, pdf_path in enumerate(pdf_paths):
+        base_name = os.path.basename(pdf_path)
+        if base_name in original_pdf_filenames:
+            new_name = changed_pdf_filenames[original_pdf_filenames.index(base_name)]
+            new_path = os.path.join(directory_path, new_name)
+            os.rename(pdf_path, new_path)
 
 if __name__ == "__main__":
     main()
