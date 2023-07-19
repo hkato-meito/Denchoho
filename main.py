@@ -37,8 +37,8 @@ def write_text_to_file(file_path, text):
         f.write(text)
 
 def main():
-    # PDFファイルが入っているフォルダーを指定
-    # directory_path = "C:\\Users\\hkato\\Documents\\vscode\\Denchoho\\"
+    # PDFファイルが入っているフォルダーを指定する場合は以下を使用する
+    # directory_path = "C:\\Users\\demo\\Documents\\vscode\\Denchoho\\"
     # main.pyのフォルダーを取得
     directory_path = os.path.dirname(os.path.abspath(__file__))
     # フォルダー内のPDFファイルの配列pdf_pathsを取得
@@ -50,7 +50,7 @@ def main():
 
     # .envからOpenAI APIキーを取得しセット
     load_dotenv()
-    openai.api_key = os.getenv("API_KEY")
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
     for pdf_path in pdf_paths:
         original_pdf_filenames.append(os.path.basename(pdf_path))
@@ -91,7 +91,8 @@ def main():
     # 変更前後のファイル名を表示
     for original, changed in zip(original_pdf_filenames, changed_pdf_filenames):
         print(f"{original}  ->  {changed}")
-        
+    
+    # PDFファイル名を電子帳簿保存法対応ファイル名（＜請求日＞_＜請求元会社名＞_＜請求金額＞.pdf）に変更する
     for i, pdf_path in enumerate(pdf_paths):
         base_name = os.path.basename(pdf_path)
         if base_name in original_pdf_filenames:
