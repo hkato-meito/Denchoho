@@ -1,3 +1,5 @@
 # .gitignore file
 .env
-/退避フォルダー/
+*.pdf
+*.txt
+退避フォルダー/
