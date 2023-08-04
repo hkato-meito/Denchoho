@@ -6,6 +6,12 @@
 
 OpenAPI の API キー
 
+# 必要な Python ライブラリをインストールする
+
+pip install openai  
+pip install python-dotenv  
+pip install pdfminer.six
+
 # 使い方
 
 1. .env_template を.env にリネームして、OpenAI API key にあなたの API キーを書き込む。
