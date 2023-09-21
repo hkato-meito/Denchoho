@@ -1,6 +1,5 @@
 # .gitignore file
 .env
-*.pdf
 *.txt
 退避フォルダー/
 変更前PDFファイル/
