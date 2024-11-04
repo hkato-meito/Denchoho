@@ -8,7 +8,7 @@ OpenAPI の API キー
 
 # 必要な Python ライブラリをインストールする
 
-pip install openai  
+pip install openai==0.28.0  
 pip install python-dotenv  
 pip install pdfminer.six
 
